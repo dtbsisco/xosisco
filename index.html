@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="slide.js" defer></script>
+    <script src="hamburger.js" defer></script>
 </head>
 <body>
 
@@ -15,7 +16,12 @@
         <div class="container">
             <img src="logo.png" class="logo">
             <nav>
-                <ul>
+                <div class="hamburger-menu" id="hamburgerMenu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul id="navLinks">
                     <li><a href="#about" class="about-me">About</a></li>
                     <li><a href="#skills" class="skills">Experience</a></li>
                     <li><a href="#work" class="work">Portfolio</a></li>
@@ -25,7 +31,7 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>    
 
     <main>
         <section id="about" class="section">
@@ -89,25 +95,58 @@
         <section id="work" class="section">
             <div class="container">
                 <h2>Portfolio</h2>
+                <div class="portfolio-categories">
+                    <button class="category-button" data-category="logo">Logo</button>
+                    <button class="category-button" data-category="thumbnail">Thumbnail</button>
+                    <button class="category-button" data-category="gamepassbadge">Gamepass / Badge</button>
+                    <button class="category-button" data-category="ui">UI</button>
+                    <button class="category-button" data-category="all" data-category="all">All</button>
+                </div>
                 <div class="work-grid">
                     <div class="gallery">
                         <div class="gallery-images">
-                            <div class="gallery-item">
-                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dibn8av-563dab09-d600-4743-b210-3f880ee59db8.png/v1/fill/w_894,h_894,q_70,strp/ghoulfy_by_dasiscow_dibn8av-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGlibjhhdi01NjNkYWIwOS1kNjAwLTQ3NDMtYjIxMC0zZjg4MGVlNTlkYjgucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Sc2-_6mG5PnMHvjmgLbd5FtklOwDKYgEacOJSEnKgYE">
-                            </div>
-                            <div class="gallery-item">
+                            <div class="gallery-item" data-category="logo">
                                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dicilnc-03f09be7-6fa6-4d78-94c1-1f58eb414e72.png/v1/fill/w_894,h_894,q_70,strp/666_by_dasiscow_dicilnc-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGljaWxuYy0wM2YwOWJlNy02ZmE2LTRkNzgtOTRjMS0xZjU4ZWI0MTRlNzIucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.FLmBodl3rhDJmOQT5fgx8z8GFo-jw0g9PB9FRex3310">
                             </div>
-                            <div class="gallery-item">
-                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/diblwbr-c581b207-d1c7-46b4-8670-ad21297945fd.png/v1/fill/w_894,h_894,q_70,strp/sknifelogo_by_dasiscow_diblwbr-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGlibHdici1jNTgxYjIwNy1kMWM3LTQ2YjQtODY3MC1hZDIxMjk3OTQ1ZmQucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.YuUBwVMDkkB-_bJ-7sTxSlHxX6H6eZuspWsD9rMl1yY">
+                            <div class="gallery-item" data-category="logo">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dibn8av-563dab09-d600-4743-b210-3f880ee59db8.png/v1/fill/w_894,h_894,q_70,strp/ghoulfy_by_dasiscow_dibn8av-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGlibjhhdi01NjNkYWIwOS1kNjAwLTQ3NDMtYjIxMC0zZjg4MGVlNTlkYjgucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Sc2-_6mG5PnMHvjmgLbd5FtklOwDKYgEacOJSEnKgYE">
                             </div>
-                            <div class="gallery-item">
+                            <div class="gallery-item" data-category="logo">
                                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dgemuw2-d5e02d47-fde1-4203-a4c7-d52ff1393f5e.png/v1/fill/w_894,h_894,q_70,strp/bughunsimulatorlogo_by_dasiscow_dgemuw2-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGdlbXV3Mi1kNWUwMmQ0Ny1mZGUxLTQyMDMtYTRjNy1kNTJmZjEzOTNmNWUucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.lGYyFmTQrcUR7VfyPjD6qqPicdHMQ4yPCo7jOc5B5Jw">
                             </div>
-                        </div>
-                        <div class="gallery-navigation">
-                            <button class="prev">‹</button>
-                            <button class="next">›</button>
+                            <div class="gallery-item" data-category="logo">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dg322dy-67775ca2-4770-4cb5-a28f-3286c04e0ada.png/v1/fill/w_894,h_894,q_70,strp/edhc_by_dasiscow_dg322dy-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGczMjJkeS02Nzc3NWNhMi00NzcwLTRjYjUtYTI4Zi0zMjg2YzA0ZTBhZGEucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.WddTJE7bxBHYSmSrllQVj2INS92WpEErhHVoT4s6bCI">
+                            </div>
+                            <div class="gallery-item" data-category="logo">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dg322gk-0693e47b-6169-4f8a-9585-cd83f5f3015e.png/v1/fill/w_894,h_894,q_70,strp/revengeunlocks_by_dasiscow_dg322gk-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGczMjJnay0wNjkzZTQ3Yi02MTY5LTRmOGEtOTU4NS1jZDgzZjVmMzAxNWUucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.lj5SIrBlTSqlu8MsLwmHxLVHkWGoRnPat5IQMiOmFCY">
+                            </div>
+                            <div class="gallery-item" data-category="logo">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dg322dl-f30e2399-a86d-46ac-b173-b702ced7f26f.png/v1/fill/w_894,h_894,q_70,strp/coreboosts2_by_dasiscow_dg322dl-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGczMjJkbC1mMzBlMjM5OS1hODZkLTQ2YWMtYjE3My1iNzAyY2VkN2YyNmYucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.B9iAcoLbREgksXbq1Ij-BzMqyun1VgXV7B0tvsj5Q_g">
+                            </div>
+                            <div class="gallery-item" data-category="thumbnail">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dgdrv81-fcb535a5-d80f-49fd-a4e2-47fc158d5d98.png/v1/fill/w_1192,h_670,q_70,strp/rblxthumbnail66_by_dasiscow_dgdrv81-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kZ2RydjgxLWZjYjUzNWE1LWQ4MGYtNDlmZC1hNGUyLTQ3ZmMxNThkNWQ5OC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.a7dxmPiPZCw1tUlwcwRCd4ky8rFB8rs8VUYUe2mmUi0">
+                            </div>
+                            <div class="gallery-item" data-category="thumbnail">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dicyloe-9f123737-f990-4b87-8872-e39f915374b6.png/v1/fill/w_1192,h_670,q_70,strp/6bc_by_dasiscow_dicyloe-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kaWN5bG9lLTlmMTIzNzM3LWY5OTAtNGI4Ny04ODcyLWUzOWY5MTUzNzRiNi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.6GT8lVltPqHbmThtIWdBC-yuRUihzOAOpjGI-VnbPVc">
+                            </div>
+                            <div class="gallery-item" data-category="thumbnail">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dge51cm-ef20fb31-0cfa-410f-9065-955bbab8205f.png/v1/fill/w_1192,h_670,q_70,strp/simplegfxfacetest_by_dasiscow_dge51cm-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kZ2U1MWNtLWVmMjBmYjMxLTBjZmEtNDEwZi05MDY1LTk1NWJiYWI4MjA1Zi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.y25Em_1IehyPYo0cTawABVK0wPoggj9P3mA3TrwdkMY">
+                            </div>
+                            <div class="gallery-item" data-category="gamepassbadge">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dik2tfj-59555127-f5e3-4ca4-b8ee-28dde206bb3a.png/v1/fill/w_1280,h_471,q_80,strp/gamepass67_by_dasiscow_dik2tfj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDcxIiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kaWsydGZqLTU5NTU1MTI3LWY1ZTMtNGNhNC1iOGVlLTI4ZGRlMjA2YmIzYS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.UBu4iORZyDaihKRQzHEjBunD7rLXKwDKBa3HUIrW6Qs">
+                            </div>
+                            <div class="gallery-item" data-category="gamepassbadge">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dgd00ha-a97c14aa-98bf-491d-beb8-09b450fe49ae.png/v1/fill/w_868,h_921,q_70,strp/rblxicons52_by_dasiscow_dgd00ha-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGdkMDBoYS1hOTdjMTRhYS05OGJmLTQ5MWQtYmViOC0wOWI0NTBmZTQ5YWUucG5nIiwid2lkdGgiOiI8PTEwMTgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.PzjXIkjv2fkjF5_sZaezSzxs7H--G9CnYF3iVjFyQb4">
+                            </div>
+                            <div class="gallery-item" data-category="gamepassbadge">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dgefka4-d5469bb5-bc4c-4675-9e3e-a16292b3af98.png/v1/fill/w_1192,h_670,q_70,strp/fnafgamepasses_by_dasiscow_dgefka4-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kZ2Vma2E0LWQ1NDY5YmI1LWJjNGMtNDY3NS05ZTNlLWExNjI5MmIzYWY5OC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Pysv7XjdxqGa0J-x8VCR--ljentXoBtg38OCkjnYcRk">
+                            </div>
+                            <div class="gallery-item" data-category="ui">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dgedidr-e1876bc1-3b9a-428e-aa1b-fb4016398e28.png/v1/fill/w_1231,h_649,q_70,strp/4kui25_by_dasiscow_dgedidr-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc1IiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kZ2VkaWRyLWUxODc2YmMxLTNiOWEtNDI4ZS1hYTFiLWZiNDAxNjM5OGUyOC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.pq-SI0MNk5iykSX44Dbg1uR04XuoO9MC0bMo_WnnwaA">
+                            </div>
+                            <div class="gallery-item" data-category="ui">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dil0j2r-5c852ca8-5f49-4290-bf3c-acb9f974b34f.png/v1/fit/w_828,h_966/optionsui_by_dasiscow_dil0j2r-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ5NCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGlsMGoyci01Yzg1MmNhOC01ZjQ5LTQyOTAtYmYzYy1hY2I5Zjk3NGIzNGYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.hcDgjZHb0M6qokYcdI-VAdecdMjaQdqjh382DZRAypQ">
+                            </div>
                         </div>
                     </div>
                 </div>

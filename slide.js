@@ -1,25 +1,16 @@
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const galleryImages = document.querySelector('.gallery-images');
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const categoryButtons = document.querySelectorAll(".category-button");
+    const galleryItems = document.querySelectorAll(".gallery-item");
 
-const images = document.querySelectorAll('.gallery-item');
+    categoryButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category");
 
-nextButton.addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-        currentIndex++;
-        updateGallery();
-    }
+            galleryItems.forEach(item => {
+                item.style.display = category === "all" || item.getAttribute("data-category") === category 
+                    ? "block" 
+                    : "none";
+            });
+        });
+    });
 });
-
-prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateGallery();
-    }
-});
-
-function updateGallery() {
-    const offset = -currentIndex * 100;
-    galleryImages.style.transform = `translateX(${offset}%)`;
-}
