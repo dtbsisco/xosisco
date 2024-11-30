@@ -325,11 +325,6 @@ footer {
     padding: 1.5rem 0;
 }
 
-#contact strong {
-    color: var(--secondary-color);
-    font-size: 1.1rem;
-}
-
 .btn-container {
     display: flex;
     justify-content: center;
@@ -435,10 +430,6 @@ footer {
     margin-top: 1rem;
 }
 
-#contact {
-    padding: 4rem 0;
-}
-
 #contact .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -477,7 +468,6 @@ footer {
 .discord-logo, .deviantart-logo, .linktree-logo {
     width: 20px;
     height: 20px;
-    margin-right: 8px;
 }
 
 .hamburger-menu {
