@@ -426,31 +426,24 @@ footer {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: white;
-    background-color: #5865F2;
-    padding: 8px 18px;
+    color: var(--menu-text-color);
+    background-color: var(--menu-color);
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: background-color 0.3s ease;
-    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
 }
 
 .contact-btn:hover {
-    transition: background-color 0.3s ease;
-    background-color: #4854c9;
+    background-color: var(--hover-color);
+    transform: scale(1.05);
 }
 
-.contact-btn.deviants {
-    background-color: #00e59b;
-}
-
-.contact-btn.deviants:hover {
-    background-color: #00b88c;
-}
-
-.discord-logo, .deviantart-logo {
+.discord-logo, .deviantart-logo, .linktree-logo {
     width: 20px;
     height: 20px;
     margin-right: 8px;
