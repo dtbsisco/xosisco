@@ -158,9 +158,6 @@ nav ul li a:hover {
 a {
     color: #0077cc;
     text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
 }
 
 h2, p {
