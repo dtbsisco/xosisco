@@ -11,8 +11,14 @@
     <script src="hamburger.js" defer></script>
     <script src="loading.js" defer></script>
     <script src="snow.js" defer></script>
+    <script src="modal.js" defer></script>
 </head>
 <body>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <div class="loader-container">
         <img src="logo.png" class="loading-logo">
@@ -36,6 +42,7 @@
                     <li><a href="#work" class="work">Portfolio</a></li>
                     <li><a href="#services" class="services">Services</a></li>
                     <li><a href="#prices" class="prices">Pricing</a></li>
+                    <li><a href="#reviews" class="reviews">Reviews</a></li>
                     <li><a href="#contact" class="contact">Contact</a></li>
                 </ul>
             </nav>
@@ -134,6 +141,9 @@
                                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dg322dl-f30e2399-a86d-46ac-b173-b702ced7f26f.png/v1/fill/w_894,h_894,q_70,strp/coreboosts2_by_dasiscow_dg322dl-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzVmMjk5YTQ2LTFlMWEtNGJkNy04YTQ1LTE1MmY4YTA3MjViMFwvZGczMjJkbC1mMzBlMjM5OS1hODZkLTQ2YWMtYjE3My1iNzAyY2VkN2YyNmYucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.B9iAcoLbREgksXbq1Ij-BzMqyun1VgXV7B0tvsj5Q_g">
                             </div>
                             <div class="gallery-item" data-category="thumbnail">
+                                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dinz9ay-c553f0b6-67d7-4fd5-b46e-a2319b631107.png/v1/fill/w_1192,h_670,q_70,strp/cadothumbnailportfolio_by_dasiscow_dinz9ay-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kaW56OWF5LWM1NTNmMGI2LTY3ZDctNGZkNS1iNDZlLWEyMzE5YjYzMTEwNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xn2IjEXhXdSRBlMY2xvErd4inMWe0oa1QdFXP-XbU2g">
+                            </div>
+                            <div class="gallery-item" data-category="thumbnail">
                                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f299a46-1e1a-4bd7-8a45-152f8a0725b0/dgdrv81-fcb535a5-d80f-49fd-a4e2-47fc158d5d98.png/v1/fill/w_1192,h_670,q_70,strp/rblxthumbnail66_by_dasiscow_dgdrv81-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNWYyOTlhNDYtMWUxYS00YmQ3LThhNDUtMTUyZjhhMDcyNWIwXC9kZ2RydjgxLWZjYjUzNWE1LWQ4MGYtNDlmZC1hNGUyLTQ3ZmMxNThkNWQ5OC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.a7dxmPiPZCw1tUlwcwRCd4ky8rFB8rs8VUYUe2mmUi0">
                             </div>
                             <div class="gallery-item" data-category="thumbnail">
@@ -223,6 +233,32 @@
                 </div>
             </div>
         </section>         
+
+        <section id="reviews" class="section">
+            <div class="container">
+                <h2>Reviews</h2>
+                <div class="reviews-list">
+                    <div class="review">
+                        <img src="https://cdn.discordapp.com/avatars/1272972877989285962/0c375be0b12b445629587c76427134dc.png?size=1024" class="review-img">
+                        <h3>cado</h3>
+                        <p class="secondary-name">lama1k</p>
+                        <p>"Very good graphics artist and trustworthy."</p>
+                    </div>
+                    <div class="review">
+                        <img src="https://cdn.discordapp.com/avatars/916805194547867699/31f2fc95b48c2f4213a3486a0f99dc30.png?size=1024" class="review-img">
+                        <h3>! 𝙃𝙖𝙧𝙫𝙚𝙮 ᶻ 𝗓 𐰁 .ᐟ</h3>
+                        <p class="secondary-name">shefw.harvey</p>
+                        <p>"This is my second purchase and he is honestly really good would recommend."</p>
+                    </div>
+                    <div class="review">
+                        <img src="https://cdn.discordapp.com/avatars/1064675132913746011/debdcb7450f9be631ace2a63f786038e.png?size=1024" class="review-img">
+                        <h3>2LacedJaONYT</h3>
+                        <p class="secondary-name">babyja772</p>
+                        <p>"He got it done fast and I like his work definitely coming to shop again."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="contact" class="section">
             <div class="container">
