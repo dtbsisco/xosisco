@@ -11,6 +11,7 @@
     <script src="hamburger.js" defer></script>
     <script src="loading.js" defer></script>
     <script src="modal.js" defer></script>
+    <script src="message.js" defer></script>
 </head>
 <body>
 
@@ -264,15 +265,22 @@
                     <a href="https://discord.com/users/1180583624567967786" class="contact-btn" target="_blank">
                         <img src="discord.png" class="discord-logo">
                     </a>
-        
+                
                     <a href="https://www.deviantart.com/dasiscow" target="_blank" class="contact-btn deviants">
                         <img src="deviantart.png" class="deviantart-logo">
                     </a>
-        
+                
                     <a href="https://linktr.ee/xosisco" target="_blank" class="contact-btn deviants">
                         <img src="linktree.png" class="linktree-logo">
                     </a>
                 </div>
+        
+                <h3>Send a message to Discord</h3>
+                <form id="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
